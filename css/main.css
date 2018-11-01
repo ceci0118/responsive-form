@@ -1,0 +1,164 @@
+@import url('some google sans-serif font');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+html{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+main{
+/*    background: blue;*/
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    max-width: 1000px;
+}
+
+input#min.price::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+input.price#max::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+}
+header{
+    background-image: url(../img/charles-deluvio-547196-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 350px;
+}
+main{
+    display: flex;
+}
+h1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    line-height: 60px;
+}
+h1 img{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 60px;
+    margin: 10px;
+    float: left;
+}
+span{
+    font-size: 70px;
+    margin: 10px 0;
+}
+span:first-of-type{
+    grid-column-start: 2;
+}
+span:last-of-type{
+    margin-right: 10px;
+}
+form{
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+}
+.place{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+button{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 8px 40px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    float: right;
+}
+
+
+@media only screen and (max-width:600px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        width: 100%;
+        background-position: center;
+        min-height: 400px;
+    }
+    header{
+        text-align: center;
+    }
+    h1 img{
+        grid-column-end: 2;
+    }
+    span:first-of-type{
+        grid-column-start: 3;
+        text-align: right;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-box{
+        margin-bottom: 10px;
+    }
+    button{
+        margin: 2em 0 0;
+    }
+    .search{
+        align-self: center;
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:900px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        width: 100%;
+        background-position: right;
+        min-height: 400px;
+    }
+    h1 img{
+        grid-column-end: 2;
+    }
+    span:first-of-type{
+        grid-column-start: 3;
+        text-align: right;
+    }
+    form{
+        padding: 1em
+    }
+}
+
+@media only screen and (min-width:901px){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
